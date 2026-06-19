@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#0F1117</color>
+    <color name="card_bg">#1E2130</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_text">#9AA0B4</color>
+    <color name="gray_inactive">#666C80</color>
+    <color name="green_active">#00E676</color>
+    <color name="blue_start">#2979FF</color>
+    <color name="red_stop">#FF1744</color>
+    <color name="shield_blue">#1565C0</color>
+    <color name="shield_glow">#42A5F5</color>
+</resources>

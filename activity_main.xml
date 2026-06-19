@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- العنوان -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BlockAds Shield"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حماية شاملة من الإعلانات"
+            android:textSize="14sp"
+            android:textColor="@color/gray_text"
+            android:layout_marginTop="4dp" />
+
+        <!-- أيقونة الدرع -->
+        <ImageView
+            android:id="@+id/iv_shield"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_shield"
+            android:layout_marginTop="32dp"
+            android:contentDescription="Shield" />
+
+        <!-- حالة الحماية -->
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭕ الحماية غير مُفعَّلة"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray_inactive"
+            android:layout_marginTop="16dp" />
+
+        <!-- زر الضبط الرئيسي -->
+        <Button
+            android:id="@+id/btn_toggle"
+            android:layout_width="220dp"
+            android:layout_height="56dp"
+            android:text="🚀 تفعيل الحماية"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue_start"
+            android:layout_marginTop="24dp"
+            android:cornerRadius="28dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- إحصائيات الحجب -->
+        <TextView
+            android:id="@+id/tv_ads_blocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إعلانات محجوبة: 0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_active"
+            android:layout_marginTop="28dp" />
+
+        <!-- بطاقة طبقات الحماية -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔰 طبقات الحماية"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_dns_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭕ DNS Filtering: متوقف"
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_quic_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭕ QUIC/HTTP3 Block: متوقف"
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:id="@+id/tv_json_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭕ JSON Ad Filter: متوقف"
+                android:textSize="13sp"
+                android:textColor="@color/gray_text"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- بطاقة التطبيقات المحمية -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📱 التطبيقات المحمية"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_tiktok_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="⭕ TikTok"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_text"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_snap_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="⭕ Snapchat"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_text"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_insta_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="⭕ Instagram"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_text"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- تذييل -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="البيانات تُعالج محلياً على جهازك فقط 🔒"
+            android:textSize="11sp"
+            android:textColor="@color/gray_text"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

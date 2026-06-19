@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlockAds</string>
+    <string name="btn_start">🚀 تفعيل الحماية</string>
+    <string name="btn_stop">🛑 إيقاف الحماية</string>
+    <string name="status_active">✅ الحماية مُفعَّلة</string>
+    <string name="status_inactive">⭕ الحماية غير مُفعَّلة</string>
+    <string name="vpn_permission_required">يجب السماح بإذن VPN</string>
+</resources>

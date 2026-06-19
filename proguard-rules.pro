@@ -1,0 +1,4 @@
+-keep class com.blockads.** { *; }
+-keepclassmembers class com.blockads.vpn.BlockAdsVpnService { *; }
+-dontwarn okhttp3.**
+-keep class okhttp3.** { *; }
